@@ -1,0 +1,2 @@
+xcopy /s/Y /i "C:\F-Drive\Learnings\GIT\Satyajit_Python\Bin" "C:\F-Drive\Learnings\GIT\Satyajit_Python\Bin_backup"
+xcopy /s/Y /i "C:\F-Drive\Learnings\GIT\Satyajit_Python\Jenkins\" "C:\F-Drive\Learnings\GIT\Satyajit_Python\Bin"
