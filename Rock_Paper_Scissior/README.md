@@ -1,102 +1,115 @@
-# Interactive Rock Paper Scissors Game with ASCII Art Visualization
+# Interactive Rock Paper Scissors Game with Enhanced Visual and Audio Features
 
-This Python-based Rock Paper Scissors game provides an engaging command-line gaming experience with ASCII art visualizations and score tracking. Players compete against a computer opponent in this classic game while enjoying visual representations of each move and detailed score tracking.
+A modern, feature-rich implementation of the classic Rock Paper Scissors game built in Python. This game offers an engaging player experience with ASCII art visuals, customizable color themes, sound effects, and an intuitive user interface.
 
-The game implements the traditional Rock Paper Scissors rules with an intuitive numeric input system and clear visual feedback. It features persistent score tracking, round counting, and ASCII art representations of each move, making the gaming experience both visually appealing and interactive. The latest version (V4) includes enhanced features like round tracking and detailed game statistics upon exit.
+The game enhances the traditional Rock Paper Scissors experience with multiple features:
+- Customizable player usernames and game settings
+- Three distinct color themes (Default, Neon, and Retro)
+- ASCII art representations of game elements
+- Sound effects for game actions (Windows only)
+- Real-time score tracking and round counting
+- Interactive countdown animations
+- Comprehensive game statistics and end-game summary
 
 ## Repository Structure
 ```
-.
-├── Rock_Paper_Scissior_V1.py  # Initial version with basic game mechanics and ASCII art
-├── Rock_Paper_Scissior_V2.py  # Added round tracking and enhanced score display
-├── Rock_Paper_Scissior_V3.py  # Improved game flow and user feedback
-└── Rock_Paper_Scissior_V4.py  # Final version with complete features and polished UI
+Rock_Paper_Scissior/
+├── Archive_doc/               # Documentation archive
+│   └── README.md             # Archive documentation
+├── requirements.txt          # Project dependencies (colorama)
+├── Rock_Paper_Scissior_Enhanced.py   # Main enhanced version with all features
+├── Rock_Paper_Scissior_UI.py         # UI-focused version
+└── Rock_Paper_Scissior_V[1-7].py     # Development versions showing progression
 ```
 
 ## Usage Instructions
 ### Prerequisites
-- Python 3.x installed on your system
-- Terminal or command prompt access
+- Python 3.6 or higher
+- Required packages:
+  ```
+  colorama==0.4.4
+  ```
+- Windows OS for sound effects (optional)
 
 ### Installation
-1. Clone the repository or download the Python files:
+1. Clone the repository:
 ```bash
-git clone [repository-url]
+git clone https://github.com/yourusername/Rock_Paper_Scissior.git
+cd Rock_Paper_Scissior
 ```
 
-2. Navigate to the game directory:
+2. Install required packages:
 ```bash
-cd [game-directory]
+pip install -r requirements.txt
 ```
 
 ### Quick Start
-1. Run the latest version of the game:
+1. Run the enhanced version:
 ```bash
-python Rock_Paper_Scissior_V4.py
+python Rock_Paper_Scissior_Enhanced.py
 ```
 
-2. Follow the on-screen prompts:
-- Enter 0 for Rock
-- Enter 1 for Paper
-- Enter 2 for Scissors
-- Enter 4 to Exit
+2. Follow the setup prompts to:
+   - Enter your username (or press Enter for default)
+   - Select a color theme
+   - Enable/disable sound effects
+
+3. Play the game using these commands:
+   - `0` - Choose Rock
+   - `1` - Choose Paper
+   - `2` - Choose Scissors
+   - `8` - Access Settings
+   - `9` - Exit Game
 
 ### More Detailed Examples
 ```python
-# Example game interaction:
-Enter 0 for Rock, 1 for Paper and 2 for scissor or 4 to Exit
-0
-you have entered - Rock
-    _______
----'   ____)
-      (_____)
-      (_____)
-      (____)
----.__(___)
-
-Computer have entered - Paper
-    _______
----'   ____)____
-          ______)
-          _______)
-         _______)
----.__________) 
-
-YOU HAVE LOST  -- BETTER LUCK NEXT TIME ....
-Round 1 | Score: You 0 - Computer 1
+# Example game flow
+1. Enter username: "Player1"
+2. Select theme: "2" (for Neon theme)
+3. Enable sound effects: "y"
+4. Choose Rock: "0"
+   > Computer randomly selects
+   > Winner is determined
+   > Scores are updated
+5. Access settings: "8"
+   > Modify username, theme, or sound settings
+6. Exit game: "9"
+   > Final scores and winner displayed
 ```
 
 ### Troubleshooting
-Common issues and solutions:
+Common Issues:
+1. Sound effects not working
+   - Verify you're on Windows OS
+   - Check system sound settings
+   - Try running with administrator privileges
 
-1. Invalid Input Error
-- Problem: "you have entered the Incorrect Value"
-- Solution: Only enter numbers 0, 1, 2, or 4
+2. Display issues
+   - Ensure terminal supports ASCII characters
+   - Try different color themes
+   - Update colorama package
 
-2. Game Not Starting
-- Verify Python installation: `python --version`
-- Ensure you're in the correct directory
-- Check file permissions: `chmod +x Rock_Paper_Scissior_V4.py`
+3. Input errors
+   - Enter only numbers 0-2, 8, or 9
+   - Avoid empty inputs
+   - Don't use special characters
 
 ## Data Flow
-The game operates on a simple input-process-output loop where user input is collected, compared against computer selection, and results are displayed with ASCII art.
+The game follows a simple input-process-output cycle with enhanced visual and audio feedback.
 
 ```ascii
-[User Input] -> [Input Validation] -> [Computer Selection]
-      |                                      |
-      v                                      v
-[Score Tracking] <- [Winner Determination] <- [Display Moves]
-      |
-      v
-[Display Results]
+[User Input] -> [Input Validation] -> [Game Logic] -> [Result Calculation]
+      ^                                                      |
+      |                                                      v
+[Display Results] <- [Visual/Audio Effects] <- [Score Update]
 ```
 
-Key component interactions:
-1. User provides numeric input (0-2, 4)
-2. Input is validated against acceptable range
-3. Computer randomly generates its move
-4. Both moves are displayed with ASCII art
-5. Winner is determined based on game rules
-6. Scores are updated and displayed
-7. Process repeats until user exits
-8. Final statistics are shown upon exit
+Component Interactions:
+1. User provides input through number keys (0-2, 8, 9)
+2. Input is validated and processed
+3. Computer generates random choice
+4. Game logic determines winner based on classic rules
+5. Scores are updated and stored in memory
+6. Visual feedback is displayed with ASCII art
+7. Sound effects play based on game events (Windows only)
+8. Results are shown with colored text and animations
