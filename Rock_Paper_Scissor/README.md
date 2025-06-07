@@ -33,7 +33,7 @@ Rock_Paper_Scissior/
 
 ### Installation
 1. Download the code:
-download code from [https://github.com/Satyajit0709/Satyajit_Python ](https://github.com/Satyajit0709/Satyajit_Python/tree/master/Rock_Paper_Scissior)
+download code from [https://github.com/Satyajit0709/Satyajit_Python ](https://github.com/Satyajit0709/Satyajit_Python/tree/master/Rock_Paper_Scissor)
 
 2. Install required packages:
 ```bash
